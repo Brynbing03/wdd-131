@@ -1,0 +1,59 @@
+.container{
+    font-family: 'Times New Roman', Times, serif;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 4px;
+    text-transform: capitalize;
+}
+
+h2 {
+    font-size: 15px;
+    text-align: center;
+    color: #006EB6;
+    letter-spacing: 4px;
+    text-transform: capitalize;
+    font-weight: lighter;
+}
+
+hr {
+    margin-bottom: 60px;
+    color: rgb(228, 228, 228);
+}
+
+p1 {
+    margin-bottom: 15px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+p2 {
+    text-align: left;
+    font-style: italic;
+}
+
+ol {
+    text-align: left;
+    margin-bottom: 20px;
+    margin: 20px;
+}
+
+ol li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+img {
+    width: 150px;
+    height: 100px;
+    margin-left: 40%;
+    margin-right: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
