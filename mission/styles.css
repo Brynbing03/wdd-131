@@ -57,3 +57,28 @@ img {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+/* ADDING DARK MODE FOR WK 2 ASSIGNMENT */
+
+.dark {
+    background-color: #333;
+    color: white
+}
+
+.dark h1 {
+    color: white
+}
+
+.dark h2 {
+    color: rgb(160, 212, 237)
+}
+
+.dark hr {
+    border-color: white
+}
+
+.dark p,
+.dark ol,
+.dark li {
+    color: white;
+}
