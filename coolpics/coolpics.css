@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+:root {
+  --primary-color: #8cb49f;
+  --secondary-color: #598cc3;
+  --accent-color: #fffbb7;
+  --text-dark: #000000;
+  --text-light: #ffffff;
+  --primary-font: Arial, Helvetica, sans-serif;
+  --secondary-font: 'Mooli', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--primary-font);
+  font-size: 1.2em;
+  color: var(--text-dark);
+  background-color: #fff;
+}
+
+nav ul {
+    list-style: none;     /* removes bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex;        /* makes items horizontal */
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+nav li {
+    display: inline;      /* optional: if not using flexbox */
+}
+  
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+}
+  
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+h1, h2, h3 {
+  font-family: var(--secondary-font);
+  color: var(--secondary-color);
+  margin: 0.5em 0;
+}
+
+/* a:link,
+a:visited {
+  color: var(--accent-color);
+  text-decoration: none;
+} */
+
+header {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1rem;
+}
+
+nav {
+  margin-top: 0.5rem;
+}
+
+button {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 1.2em;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+main {
+  padding: 1rem;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 500px) {
+    .gallery{
+        grid-template-columns: 1fr;
+        display: block;
+    }
+
+@media screen and (min-width: 700px) {
+    .gallery{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width: 900px) {
+    .gallery{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
