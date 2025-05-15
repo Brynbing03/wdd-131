@@ -86,7 +86,7 @@ figure {
   margin: 0;
 }
 
-img {
+figure img {
   max-width: 100%;
   width: 250px;
   height: 250px;
@@ -109,13 +109,49 @@ footer {
     font-size: 2rem;
     color: var(--text-light);
     cursor: pointer;
-  }
+}
   
-  #mainNav {
+#mainNav {
     display: none;
-  }
+}
 
+.hide {
+  display: none;
+}
 
+/* coolpics part 2 adding JS */
+dialog.image-modal {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+dialog.image-modal img {
+  display: block;
+  margin: 20vh auto 0 auto;
+  width: 60%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+
+.close-viewer {
+  position: absolute;
+  top: 20vh;
+  right: 5vw;
+  background: white;
+  color: black;
+  font-size: 1.2rem;
+  padding: 0.2em 0.6em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
  
 @media screen and (max-width: 500px) {
@@ -132,6 +168,9 @@ footer {
     }
     #mainNav {
       display: block;
+    }
+    dialog.image-modal img {
+      width: 80%;
     }
 }
 
@@ -154,7 +193,9 @@ footer {
         flex-direction: column;
         gap: 0.5rem;
     }
-
+    dialog.image-modal img {
+      width: 60%;
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -170,7 +211,9 @@ footer {
       gap: 1rem;
     }
     #mainNav {
-      display: block !important;
+      display: flex !important;
     }
-
+    dialog.image-modal img {
+      width: 40%;
+    }
 }
