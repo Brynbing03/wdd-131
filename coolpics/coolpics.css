@@ -116,7 +116,7 @@ footer {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 /* coolpics part 2 adding JS */
@@ -154,7 +154,7 @@ dialog.image-modal img {
 }
 
  
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 699px) {
     .gallery{
         grid-template-columns: 1fr;
         display: block;
@@ -183,11 +183,14 @@ dialog.image-modal img {
     #menuButton {
         display: center;
     }
-    #mainNav {
+    /* #mainNav {
         display: none;
     }
     #mainNav.show {
-        display: flex;
+        display: flex; */
+
+        #mainNav {
+          display: block;
   }
     nav ul {
         flex-direction: column;

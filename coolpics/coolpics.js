@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // this finds the menu button and saves it as a variable
     const menuButton = document.getElementById("menuButton");
     // this finds the list
-    const mainNav = document.querySelector("#mainNav ul");
+    const mainNav = document.getElementById("mainNav");
 
     console.log(mainNav)
 
