@@ -189,7 +189,7 @@ dialog.image-modal img {
     #mainNav.show {
         display: flex; */
 
-        #mainNav {
+    #mainNav {
           display: block;
   }
     nav ul {
