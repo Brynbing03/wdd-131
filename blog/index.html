@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A fun blog reviewing children's books">
+  <meta name="author" content="Brynlee Bingham">
+  <title>Kids Read For Fun</title>
+  <link rel="stylesheet" href="blog.css">
+  <script defer src="blog.js"></script>
+
+</head>
+<body>
+  <!-- this helps the user jump straight to content, it improves web accessibility -->
+  <div class="skiptocontent">
+    <a href="#maincontent">Skip to main content</a>
+  </div>
+
+  <!-- this displayes the website name, has the main navigation bar -->
+  <header>
+    <h1>Kids Read For Fun</h1>
+    <nav>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Archive</a></li>
+        <li><a href="#">Search</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- this wraps everything the user should focus on, the #maincontent lets the skip link know where to jump -->
+  <main id="maincontent">
+    <div class="layout">
+
+      <!-- each article holds one book review, details have the date, age range, genre and star rating and content contains the title, book image and the short book review -->
+      <section class="reviews">
+        <article>
+          <div class="details">
+            <time datetime="2022-07-05">July 5, 2022</time>
+            <p>10–14</p>
+            <p>Fantasy</p>
+            <p>★★★★</p>
+          </div>
+          <div class="content">
+            <h2>Septimus Heap Book One: Magyk</h2>
+            <img src="Magkycover2.jpg" alt="Book cover of Magyk by Angie Sage">
+            <p>If you enjoy stories about seventh sons of seventh sons and magyk this is the book for you. <a href="#">Read More…</a></p>
+          </div>
+        </article>
+
+        <article>
+          <div class="details">
+            <time datetime="2021-12-12">December 12, 2021</time>
+            <p>12–16</p>
+            <p>Fantasy</p>
+            <p>★★★★★</p>
+          </div>
+          <div class="content">
+            <h2>Magnus Chase Book One: Sword of Summer</h2>
+            <img src="xWuyBAAAQBAJ.jpeg" alt="Book cover of Magnus Chase by Rick Riordan">
+            <p>Description for Magnus Chase book goes here. <a href="#">Read More…</a></p>
+          </div>
+        </article>
+      </section>
+
+      <!-- this is for later and the filters and drop down menus -->
+      <aside class="filters">
+        <p>Filters will go here</p>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

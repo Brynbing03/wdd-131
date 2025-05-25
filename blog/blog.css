@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* base styles */
+/* this sets the default colors and fonts for the website */
+/* removes default browser spacing */
+/* styles the links */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #6d7091;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2 {
+    font-family: 'Roboto', 'Montserrat', sans-serif;
+  }
+  
+  a {
+    color: #d85dbf;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  
+/* skip to content accessibility */
+/* lets keyboard user skip directly to the main content */
+.skiptocontent a {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #39b157;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+  }
+  .skiptocontent a:focus {
+    top: 0;
+  }
+
+  
+/* header styles */
+/* centers the header and adds the orage borders above and below the nav bar */
+/* this is where I used a 3 column grip for the nav items and aligned them to the right */
+header {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  nav ul {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    justify-content: end;
+    justify-items: end;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 960px;
+    border-top: 2px solid #e98d2a;
+    border-bottom: 2px solid #e98d2a;
+  }
+  nav li a {
+    font-size: 1.2rem;
+    display: block;
+    padding: 0.5rem 1rem;
+  }
+
+  
+/* grid layout */
+/* makes a 2 column layout */
+/* centered the content with some margin and padding */
+.layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  
+/* article grid */
+/* sets up three columns, the purple verticle line, book details and book content */
+article {
+  display: grid;
+  grid-template-columns: 6px 120px 1fr; 
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-left: 0.5rem;
+}
+article::before {
+  content: "";
+  background-color: #913d8b;
+  width: 0px;
+  border-radius: 1px;
+  grid-row: 1 / span 2;
+}
+
+/* right alignd and styles book and adds purple verticle line to seperate it from content */
+.details {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #46c77c;
+  border-right: 2px solid #913d8b;
+  padding-right: 1rem;
+  margin-right: 1rem;
+}
+
+/* the teal headings, resizing the book images and centering them also adds some space below the image */
+  .content h2 {
+    color: #2fc0bb;
+    margin-top: 0;
+  }
+  .content img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem auto;
+  }  
+  
+  /* I did this so that I could get it to look correct on the smaller screen */
+  @media (max-width: 600px) {
+    .layout {
+      grid-template-columns: 1fr;
+    }
+  
+    .filters {
+      order: 2;
+    }
+  
+    .reviews {
+      order: 1;
+    }
+  }
