@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* base styles */
 /* this sets the default colors and fonts for the website */
@@ -88,10 +87,14 @@ article {
   gap: 1rem;
   margin-bottom: 2rem;
   padding-left: 0.5rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 1rem;
 }
 article::before {
   content: "";
-  background-color: #913d8b;
+  background-color: #f9f9f9;
   width: 0px;
   border-radius: 1px;
   grid-row: 1 / span 2;
@@ -105,6 +108,15 @@ article::before {
   border-right: 2px solid #913d8b;
   padding-right: 1rem;
   margin-right: 1rem;
+}
+
+.details p, .details time {
+  margin: 0.3rem 0;
+}
+
+.content p {
+  margin-top: 0.5rem;
+  line-height: 1.4;
 }
 
 /* the teal headings, resizing the book images and centering them also adds some space below the image */
