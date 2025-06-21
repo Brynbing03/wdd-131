@@ -142,18 +142,37 @@ footer {
   text-align: center;
 }
 
-footer .social {
-  margin: 1rem 0;
-}
-
 footer .social img {
   height: 32px;
   margin: 0 0.5rem;
 }
 
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
 footer .attribution {
   font-size: 0.75rem;
   margin-top: 0.5rem;
+  text-align: left;
+}
+
+footer .social {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 599px) {
+  .footer-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 @media (min-width: 600px) {
