@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Book</title>
+
+  <!-- Social Media Meta Tags -->
+  <meta name="description" content="A collection of delicious recipes with ratings and tags.">
+  <meta property="og:title" content="Recipe Book">
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="A collection of delicious recipes with ratings and tags.">
+  <meta property="og:image" content="images/apple_crisp.jpg">
+  <meta property="og:url" content="https://yourwebsite.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="recipes.css">
+  <script defer src="recipes.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="branding">
+          <img src="images/recipe-book.png" alt="Recipe Book Logo" class="logo">
+          <h1>RecipeBook</h1>
+        </div>
+    </header>      
+
+  <main>
+    <form class="search">
+      <label for="search">Find a Recipe!</label>
+      <input type="text" id="search" name="search">
+      <button type="submit" aria-label="Search"><img src="images/search.svg" alt=""></button>
+    </form>
+
+    <section class="recipe">
+      <img src="images/apple-crisp.jpg" alt="Apple Crisp" class="recipe-img">
+
+      <div class="recipe-info">
+        <div class="tags">
+          <span class="tag">dessert</span>
+        </div>
+
+        <h2>Apple Crisp</h2>
+
+        <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+          <span aria-hidden="true" class="icon-star">⭐</span>
+          <span aria-hidden="true" class="icon-star">⭐</span>
+          <span aria-hidden="true" class="icon-star">⭐</span>
+          <span aria-hidden="true" class="icon-star">⭐</span>
+          <span aria-hidden="true" class="icon-star-empty">☆</span>
+        </span>
+
+        <p class="description">
+          A warm, delicious apple crisp made with oats and brown sugar. Perfect for fall evenings or anytime you need a cozy dessert.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy;2023</p>
+    <div class="social">
+      <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+      <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+      <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+      <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+    </div>
+    <small class="attribution">
+      <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
+    </small>
+  </footer>
+</body>
+</html>
