@@ -279,3 +279,102 @@ const recipes = [
 		rating: 4
 	}
 ]
+
+
+// selectors for part 2 of assignment 
+
+// this finds parts of the html to work in the JS
+// the recipeSection is where the recipes are shown
+// the searchImput is the box where the user can type the thing they want to search
+// the searchBtn is the thing that wraps around the input and search button
+const recipeSection = document.querySelector('.recipe');
+const searchInput = document.querySelector('#search');
+const searchBtn = document.querySelector('form.search');
+
+// the random num gets a rondom number anywhere between 0 and num - 1
+// the next function returns one random item from any list such as the recipes array
+function random(num) {
+  return Math.floor(Math.random() * num);
+}
+
+function getRandomListEntry(list) {
+  return list[random(list.length)];
+}
+
+// the purpose of this is to take arrays and turn it into html
+function tagsTemplate(tags) {
+  return tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+}
+
+// this is the star rating
+// it shows gold stars for each recipe and how it rates
+// there are filled stars for each point in the rating and the rest are empty stars
+function ratingTemplate(rating) {
+  const maxStars = 5;
+  let html = `<span class="rating" role="img" aria-label="Rating: ${rating} out of 5 stars">`;
+  for (let i = 1; i <= maxStars; i++) {
+    html += `<span aria-hidden="true" class="${i <= rating ? 'icon-star' : 'icon-star-empty'}">${i <= rating ? '⭐' : '☆'}</span>`;
+  }
+  html += '</span>';
+  return html;
+}
+
+// this builds the recipe html
+// it generates all the html for one recipe using the recipe info
+// this has the pic, name, tags, star rating and the description
+function recipeTemplate(recipe) {
+  return `
+    <img src="${recipe.image}" alt="${recipe.name}" class="recipe-img">
+    <div class="recipe-info">
+      <div class="tags">${tagsTemplate(recipe.tags)}</div>
+      <h2>${recipe.name}</h2>
+      ${ratingTemplate(recipe.rating)}
+      <p class="description">${recipe.description}</p>
+    </div>
+  `;
+}
+
+// this shows the recipe on the page
+// if there isnt a recipe, it will show a message saying no recipes found
+function renderRecipes(recipeList) {
+  if (!recipeList.length) {
+    recipeSection.innerHTML = '<p>No recipes found. Try searching something else.</p>';
+    return;
+  }
+  recipeSection.innerHTML = recipeTemplate(recipeList[0]);
+}
+
+// this picks one random recipe and shows it when the page first loads
+function init() {
+  const randomRecipe = getRandomListEntry(recipes);
+  renderRecipes([randomRecipe]);
+}
+
+// this filters the recipe list based on that the user inputs
+// it check if the query matches either the name, description, any ingredient in it or tag
+// this also sorts the filtered results by alphabetical order by the ame of the recipe
+function filterRecipes(query) {
+  query = query.toLowerCase();
+  return recipes
+    .filter(recipe => {
+      return (
+        recipe.name.toLowerCase().includes(query) ||
+        recipe.description.toLowerCase().includes(query) ||
+        recipe.recipeIngredient.find(ing => ing.toLowerCase().includes(query)) ||
+        recipe.tags.find(tag => tag.toLowerCase().includes(query))
+      );
+    })
+    .sort((a, b) => a.name.localeCompare(b.name));
+}
+
+// this runs when the user clicks the search button
+function searchHandler(e) {
+  e.preventDefault();
+  const query = searchInput.value.trim();
+  const results = filterRecipes(query);
+  renderRecipes(results);
+}
+
+searchBtn.addEventListener('submit', searchHandler);
+
+init();
